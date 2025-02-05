@@ -27,7 +27,7 @@ function FileUpload() {
     formData.append("file", fileToEncrypt);
 
     try {
-      const response = await fetch("http://localhost:8080/file-encryption/encrypt", {
+      const response = await fetch("http://192.168.111.1:8080/file-encryption/encrypt", {
         method: "POST",
         body: formData,
       });
@@ -67,7 +67,7 @@ function FileUpload() {
     formData.append("key", encryptionKey);
 
     try {
-      const response = await fetch("http://localhost:8080/file-encryption/decrypt", {
+      const response = await fetch("http://192.168.111.1:8080/file-encryption/decrypt", {
         method: "POST",
         body: formData,
       });
